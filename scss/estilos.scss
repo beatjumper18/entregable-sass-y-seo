@@ -10,12 +10,6 @@ $color-black: rgb(238, 71, 71);;
     border: 2px solid red;
 }
 
-$mapa: ( 
-        play:  #3a5795,
-        colorcito: #ffffff,
-        ancho:250px,
-); 
-
 %extension{
     text-align: center;
     background-color: rgb(228, 44, 44);
@@ -53,36 +47,20 @@ $mapa: (
         justify-content:space-between;
         margin-bottom: 10px;
     }
-    nav{
-        ul{
-    
-          li{
-            display: inline-block;
-            background-color: rgb(228, 44, 44);
-            padding: 5px;
-            margin: 5px 20px 5px 20px;
-            border-radius: 5px;
-            &:hover{
-                background-color: rgb(243, 90, 90);;
-                transform: scale(1.2);
-                a{
-                    text-decoration: none;
-                    list-style: none;
-                    color: antiquewhite;
-                    font-family: 'Roboto', sans-serif;
-                }
-            }
 
-            a{
-                text-decoration: none;
-                list-style: none;
-                color: antiquewhite;
-                font-family: 'Roboto', sans-serif;
-            }
-          }
-        }
-      }
-    
+    .testing {
+            
+    .prueba:hover {
+        text-decoration: none;
+        list-style: none;
+        color: antiquewhite;
+        font-family: 'Roboto', sans-serif; 
+        background-color: #ef3c3c;
+    }
+    }
+  
+
+
     }
 
 main{
@@ -196,12 +174,19 @@ main{
     .videoServ{
         grid-area: main;
         text-align: center;  
+        iframe{
+        @media (max-width: 412px) {
+            width: 80%;}
+          }
     }
 
     .videoDos{
         grid-area: main;
         text-align: center;
-        margin: 10px;
+        iframe{
+            @media (max-width: 412px) {
+                width: 80%;}
+              }
     }
 
     .textDos{
@@ -226,6 +211,9 @@ main{
         margin: 10px; 
         img{
             margin: 10px;
+            @media (max-width: 768px) {
+                width: 80%;
+              }
         }
     }
 
@@ -244,11 +232,6 @@ main{
         }
     }
 
-    .mapa{
-        background-color: map-get($map: $mapa, $key: play);
-        color: map-get($map: $mapa, $key: colorcito);
-        width: map-get($map: $mapa, $key: ancho);
-        }
     }
           
 

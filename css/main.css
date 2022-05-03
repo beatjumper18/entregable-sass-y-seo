@@ -26,25 +26,12 @@ main h1, main .tituloOfertas {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px; }
-  .encabezado nav ul li {
-    display: inline-block;
-    background-color: #e42c2c;
-    padding: 5px;
-    margin: 5px 20px 5px 20px;
-    border-radius: 5px; }
-    .encabezado nav ul li:hover {
-      background-color: #f35a5a;
-      transform: scale(1.2); }
-      .encabezado nav ul li:hover a {
-        text-decoration: none;
-        list-style: none;
-        color: antiquewhite;
-        font-family: 'Roboto', sans-serif; }
-    .encabezado nav ul li a {
-      text-decoration: none;
-      list-style: none;
-      color: antiquewhite;
-      font-family: 'Roboto', sans-serif; }
+  .encabezado .testing .prueba:hover {
+    text-decoration: none;
+    list-style: none;
+    color: antiquewhite;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ef3c3c; }
 
 main {
   grid-area: main;
@@ -142,10 +129,15 @@ main {
   main .videoServ {
     grid-area: main;
     text-align: center; }
+    @media (max-width: 412px) {
+      main .videoServ iframe {
+        width: 80%; } }
   main .videoDos {
     grid-area: main;
-    text-align: center;
-    margin: 10px; }
+    text-align: center; }
+    @media (max-width: 412px) {
+      main .videoDos iframe {
+        width: 80%; } }
   main .textDos {
     grid-area: main;
     text-align: center;
@@ -164,6 +156,9 @@ main {
     margin: 10px; }
     main .galeria img {
       margin: 10px; }
+      @media (max-width: 768px) {
+        main .galeria img {
+          width: 80%; } }
   main .formulario {
     grid-area: main;
     text-align: center;
@@ -174,10 +169,6 @@ main {
     background-color: white; }
     main .formulario form label {
       margin: 10px; }
-  main .mapa {
-    background-color: #3a5795;
-    color: #ffffff;
-    width: 250px; }
 
 footer {
   grid-area: footer;
